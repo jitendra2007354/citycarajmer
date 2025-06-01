@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Car Ajmer - Your Trusted Cab Service</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>City Car Ajmer</h1>
+            </div>
+            <ul>
+                <li><a href="sign.html">SIGN-IN</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Our Fleet</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to City Car Ajmer</h1>
+            <p>Your Trusted Travel Partner in Ajmer</p>
+            <a href="#booking" class="cta-button">Book a Cab Now</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>Local Tours</h3>
+                <p>Explore Ajmer with comfort</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-road"></i>
+                <h3>Outstation Trips</h3>
+                <p>Travel anywhere in Rajasthan</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-plane"></i>
+                <h3>Airport Transfer</h3>
+                <p>Reliable airport pickup & drop</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fleet">
+        <h2>Our Fleet</h2>
+        <div class="fleet-cards">
+            <div class="card">
+                <img src="1234.webp" alt="DATSON"  width="300" height="200">
+                <h3>DATSON</h3>
+                <p>Comfortable for 4 passengers</p>
+            </div>
+
+            <div class="card" >
+                < <img src="12.webp" alt="TATA TIAGO EV" width="300" height="200">
+                <h3>TATA TIAGO EV</h3>
+                <p>Perfect for family trips</p>
+            </div>
+
+            <div class="card">
+                <img src="3644592.jpg" alt="AND MANY MORE"  width="300" height="200">
+                <h3>AND MANY MORE</h3>
+                <p>Premium travel experience</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book Your Ride</h2>
+        <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" id="name" required>
+                <input type="tel" placeholder="Phone Number" id="phone" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Pickup Location" id="pickup" required>
+                <input type="text" placeholder="Drop Location" id="drop" required>
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" id="time" required>
+                <select required id="carType">
+                    <option value="">Select Car Type</option>
+                    <option value="DATSON">DATSON</option>
+                    <option value="TATA TIAGO EV">TATA TIAGO EV</option>
+                    <option value="OTHER">OTHER</option>
+                </select>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 20px;">
+            <h2 style="color: green;">Thank you for your booking!</h2>
+            <p>We have received your request and will contact you shortly.</p>
+        </div>
+    </section>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const pickup = document.getElementById('pickup').value;
+            const drop = document.getElementById('drop').value;
+            const time = document.getElementById('time').value;
+            const carType = document.getElementById('carType').value;
+
+            const message = `*New Booking Request*%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Pickup: ${pickup}%0A
+Drop: ${drop}%0A
+Time: ${time}%0A
+Car Type: ${carType}`;
+
+            window.open(`https://wa.me/916377214055?text=${message}`);
+        }
+    </script>
+</body>
+        <br>
+        <align center>
+        <h1>WE WILL CALL YOU IN 5 MIN TO COMFIRM BOOKING</h1>
+        </align>
+    </section>
+    <section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <p>+91 6377214055 and 8003735590</p>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <p>jitendrasinghchauhan3008@gmail.com</p>
+                </div>
+            <div>
+                <i class="fas fa-location-dot"></i>
+                <p>Mahadev colony, Ajmer, Rajasthan</p>
+            </div>
+    </section>
+    <section>
+        <form>
+    PLEASE GIVE YOUR FEEDBACK
+    <br>
+   <textarea placeholder="YOUR FEEDBACK"></textarea>
+    <button>send</button>
+</form>
+</section>
+    <footer>
+        <p>@copy; 2025 CITY CAR AJMER. All rights reserved.</p>
+    </footer>
+</body>
+</html>
