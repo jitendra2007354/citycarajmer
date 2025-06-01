@@ -13,6 +13,7 @@
             <div class="logo">
                 <h1>City Car Ajmer</h1>
             </div>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="sign.html">SIGN-IN</a></li>
                 <li><a href="#services">Services</a></li>
@@ -162,3 +163,14 @@ Car Type: ${carType}`;
     </footer>
 </body>
 </html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
